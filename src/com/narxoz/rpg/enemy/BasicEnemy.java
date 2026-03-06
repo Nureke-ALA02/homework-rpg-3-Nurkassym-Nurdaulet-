@@ -10,7 +10,6 @@ public class BasicEnemy implements Enemy {
         this.damage = damage;
         this.health = health;
     }
-
     @Override
     public String getTitle() {
         return title;
@@ -23,15 +22,14 @@ public class BasicEnemy implements Enemy {
 
     @Override
     public void applyDamage(int amount) {
-        // TODO: enforce min 0
         health -= amount;
         if (health < 0) {
             health = 0;
         }
     }
-
     @Override
     public boolean isDefeated() {
+
         return health <= 0;
     }
 
