@@ -32,8 +32,4 @@ public class BasicEnemy implements Enemy {
 
         return health <= 0;
     }
-
-    public int getHealth() {
-        return health;
-    }
 }
