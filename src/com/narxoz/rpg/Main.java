@@ -15,8 +15,8 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
         System.out.println("=== RPG Battle Engine Demo ===\n");
-        Warrior warrior = new Warrior("Arthas");
-        Mage mage = new Mage("Jaina");
+        Warrior warrior = new Warrior("Tor");
+        Mage mage = new Mage("Potter");
         Goblin goblin = new Goblin();
 
         List<Combatant> heroes = new ArrayList<>();
@@ -34,12 +34,10 @@ public class Main {
         engineA.setRandomSeed(42L);
         EncounterResult result = engineA.runEncounter(heroes, enemies);
 
-        System.out.println("Winner: " + result.getWinner());
         System.out.println("Rounds: " + result.getRounds());
         for (String line : result.getBattleLog()) {
             System.out.println(line);
         }
-
         System.out.println("\n=== Demo Complete ===");
     }
 }
